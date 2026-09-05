@@ -748,15 +748,7 @@ Potential future improvements to the project include:
 
 These improvements could transform the project from a static analytics workflow into a more automated business intelligence pipeline.
 
----
-
-# 👩‍💻 Author
-
-**Gopikadevi**
-
-B.Tech — Artificial Intelligence & Data Science
-
-This project was developed as a portfolio project to demonstrate practical skills in **Python, SQL, MySQL, Power BI, DAX, data analysis, and business intelligence**.
+.
 
 ---
 
@@ -775,18 +767,5 @@ This project was developed as a portfolio project to demonstrate practical skill
 ✔ DAX measures
 ✔ Business-focused insights
 ✔ Complete end-to-end analytics workflow
-```
-
----
-
-## 📬 Feedback
-
-Feedback, suggestions, and ideas for improving the project are welcome.
-
-```
-
-**One small GitHub tip:** your repository already has an `Images` folder and the four dashboard screenshots, so the image paths above are designed to use those existing files.
-
-And honestly, this version makes the project read much more like **“I built an end-to-end analytics solution”** rather than **“I made a Power BI dashboard.”** That's exactly the distinction you want on a portfolio.
 ```
 
