@@ -1,4 +1,4 @@
-````markdown
+
 # 📊 Vendor Performance Analysis
 
 An end-to-end data analytics project designed to evaluate **vendor performance, product profitability, and inventory efficiency** using **Python, Pandas, SQL, MySQL, Power BI, and DAX**.
