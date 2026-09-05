@@ -1,119 +1,75 @@
-# Vendor Performance Analysis
+Vendor Performance Analysis
 
-An end-to-end data analytics project...
-
-GitHub will render that as a proper heading, not show the #.
-
-And things like:
-
-## Project Overview
-
-### Business Objectives
-
-- Identify the vendors generating the highest sales.
-- Identify the vendors generating the highest gross profit.
-
-will automatically become proper GitHub headings and bullet points.
-
-One correction
-
-The README I just gave you is the content/draft. Before you paste it, I'd actually like to give you a final polished version specifically formatted for GitHub, including:
-
-proper Markdown headings
-badges if useful
-project structure
-clickable sections/table of contents
-dashboard image embeds using your actual repository paths
-Python/SQL/Power BI sections
-methodology
-metrics
-insights
-data limitation
-clean professional wording
-
-So don't paste the previous one yet.
-
-I'll give you the final README.md as one copy-paste-ready Markdown block next.
-
-Okay, then give me the correct version where I just copy it and paste it and it would be good in that format.
-
-Absolutely. This is the copy-paste-ready README.md version.
-
-Copy everything inside this single block and paste it directly into your GitHub README.md. GitHub will render the headings, tables, images, bullets, and code blocks properly.
-
-# Vendor Performance Analysis
-
-An end-to-end data analytics project analyzing vendor performance, product profitability, and inventory efficiency using **Python, SQL, MySQL, and Power BI**.
+An end-to-end data analytics project analyzing vendor performance, product profitability, and inventory efficiency using Python, SQL, MySQL, and Power BI.
 
 The project follows the complete analytics workflow — from understanding and validating raw data to transforming it into analytical datasets and building an interactive Power BI dashboard.
 
----
-
-## 📌 Project Overview
+📌 Project Overview
 
 Managing a large number of vendors and products requires understanding which vendors and products contribute most to revenue and profit, which areas have weaker profitability, and where inventory may be moving slowly.
 
 This project analyzes sales, purchasing, vendor, product, and inventory data to provide insights into:
 
-- Vendor sales performance
-- Vendor profitability
-- Product sales performance
-- Product profitability
-- Profit margins
-- Inventory levels and changes
-- Inventory turnover
-- Slow-moving inventory
+Vendor sales performance
+Vendor profitability
+Product sales performance
+Product profitability
+Profit margins
+Inventory levels and changes
+Inventory turnover
+Slow-moving inventory
 
-The project was developed as an **end-to-end data analytics workflow**, combining Python for data preparation and exploration, SQL for data transformation and analysis, and Power BI for visualization and reporting.
+The project was developed as an end-to-end data analytics workflow, combining Python for data preparation and exploration, SQL for data transformation and analysis, and Power BI for visualization and reporting.
 
----
-
-## 🎯 Business Objectives
+🎯 Business Objectives
 
 The analysis aims to answer the following business questions:
 
-1. Which vendors generate the highest sales?
-2. Which vendors generate the highest gross profit?
-3. Which vendors have stronger or weaker profit margins?
-4. Which products generate the most revenue?
-5. Which products generate the most gross profit?
-6. Which products have low or negative profitability?
-7. How does inventory change between the beginning and end of the year?
-8. Which products have significant inventory changes?
-9. Which products have low inventory turnover and may be slow-moving?
-10. Which products hold the largest amount of inventory value at the end of the year?
+Which vendors generate the highest sales?
+Which vendors generate the highest gross profit?
+Which vendors have stronger or weaker profit margins?
+Which products generate the most revenue?
+Which products generate the most gross profit?
+Which products have low or negative profitability?
+How does inventory change between the beginning and end of the year?
+Which products have significant inventory changes?
+Which products have low inventory turnover and may be slow-moving?
+Which products hold the largest amount of inventory value at the end of the year?
+🔄 Project Workflow
 
----
+Raw Data → Python/Pandas → MySQL/SQL → Analytical Tables → Power BI/DAX → Business Insights
 
-# 🔄 Project Workflow
-
-```text
+Workflow
 Raw Data
-    │
-    ▼
+Sales
+Purchases
+Purchase Prices
+Beginning Inventory
+Ending Inventory
+Vendor Invoice
 Python / Pandas
-Data Understanding
-Data Cleaning
-Data Exploration
-Data Validation
-    │
-    ▼
+Data understanding
+Data cleaning
+Data validation
+Exploratory analysis
 MySQL / SQL
-Database Setup
+Database creation
+Data loading
 Joins
 Aggregations
-Business Calculations
-Analytical Tables
-    │
-    ▼
+Business calculations
+Analytical tables
 Power BI
-Data Model
-DAX Measures
-KPIs
+Data modelling
+DAX measures
+KPI cards
 Visualizations
-    │
-    ▼
-Business Insights
+Dashboard development
+Final Output
+Vendor performance analysis
+Product performance analysis
+Inventory performance analysis
+Executive dashboard
 🗂️ Repository Structure
 Vendor_Performance_Analysis/
 │
@@ -134,13 +90,13 @@ Vendor_Performance_Analysis/
 │
 └── README.md
 
-The original raw and processed datasets are not included in this repository because of their large file sizes. The datasets, their structure, and the analytical workflow are documented throughout the project.
+The original raw and processed datasets are not included in this repository because of their large file sizes.
 
 📊 Dataset
 
 The project uses multiple datasets representing sales, purchasing, vendors, products, and inventory.
 
-Main datasets
+Main Datasets
 Dataset	Description
 Sales	Transaction-level sales information
 Purchases	Vendor purchase transactions
@@ -203,7 +159,9 @@ Python was primarily used for data understanding, cleaning, exploration, and val
 After understanding and validating the datasets in Python, the data was loaded into a MySQL database.
 
 Database
+
 vendor_performance_analysis
+
 Main Tables
 sales
 purchases
@@ -215,6 +173,7 @@ vendor_invoice
 SQL was used for:
 
 Database and table creation
+Loading data into MySQL
 Joining datasets
 Aggregating transaction-level data
 Vendor-level analysis
@@ -223,35 +182,8 @@ Inventory analysis
 Profitability calculations
 Inventory turnover calculations
 Creating analytical datasets
-📐 Key Business Metrics
-Gross Profit
 
-Gross profit was calculated as:
-
-Gross Profit = Sales Revenue - Cost of Goods Sold
-
-For product-level analysis, Cost of Goods Sold was calculated using:
-
-COGS = Sales Quantity × Purchase Price
-
-Purchase prices were matched to sales using the product Brand.
-
-Profit Margin
-Profit Margin = Gross Profit / Sales Revenue × 100
-
-Profit margin was used to compare profitability across vendors and products independently of their overall sales volume.
-
-Average Inventory
-Average Inventory =
-(Beginning Inventory + Ending Inventory) / 2
-
-Average inventory provides the inventory base used when calculating inventory turnover.
-
-Inventory Turnover
-Inventory Turnover =
-COGS / Average Inventory
-
-A lower inventory turnover indicates that inventory is moving more slowly relative to the amount of inventory being held.
+The complete SQL workflow is available in vendor_performance_analysis.sql.
 
 📋 Analytical Datasets
 
@@ -289,11 +221,40 @@ Inventory Change
 Average Inventory
 COGS
 Inventory Turnover
+📐 Key Business Metrics
+Gross Profit
+
+Gross Profit = Sales Revenue − Cost of Goods Sold
+
+For product-level analysis, Cost of Goods Sold was calculated using:
+
+COGS = Sales Quantity × Purchase Price
+
+Purchase prices were matched to sales using the product Brand.
+
+Profit Margin
+
+Profit Margin = Gross Profit / Sales Revenue × 100
+
+Profit margin was used to compare profitability across vendors and products independently of their overall sales volume.
+
+Average Inventory
+
+Average Inventory = (Beginning Inventory + Ending Inventory) / 2
+
+Average inventory provides the inventory base used when calculating inventory turnover.
+
+Inventory Turnover
+
+Inventory Turnover = COGS / Average Inventory
+
+A lower inventory turnover indicates that inventory is moving more slowly relative to the amount of inventory being held.
+
 📊 Power BI Dashboard
 
-The final analytical datasets were imported into Power BI to create a four-page interactive dashboard.
+The final analytical datasets were imported into Power BI to create a four-page dashboard.
 
-The dashboard uses DAX measures, KPI cards, filters, and multiple visualization types to present the analysis.
+The dashboard uses DAX measures, KPI cards, and multiple visualization types to present the analysis.
 
 1️⃣ Executive Overview
 
@@ -361,9 +322,6 @@ Products with the highest ending inventory values
 Dashboard Preview
 
 🔎 Key Insights
-
-The analysis provides several useful business insights.
-
 Vendor Performance
 
 High sales volume does not necessarily mean high profitability. Comparing vendor sales with gross profit and profit margin helps identify vendors that generate significant revenue while operating at different levels of profitability.
@@ -383,23 +341,16 @@ Comparing beginning and ending inventory highlights changes in the amount of cap
 Products with low inventory turnover may indicate slow-moving inventory, which can increase holding costs and tie up working capital.
 
 🛠️ Tools & Technologies
-Programming & Data Analysis
 Python
 Pandas
 Jupyter Notebook
-Database & Data Transformation
 MySQL
 SQL
-Business Intelligence
 Microsoft Power BI
 DAX
-Version Control
 Git
 GitHub
 💡 Skills Demonstrated
-
-This project demonstrates practical experience with:
-
 Data cleaning
 Data exploration
 Exploratory data analysis
@@ -422,29 +373,22 @@ Dashboard design
 Business insight generation
 🚀 Project Outcome
 
-The project transformed raw sales, purchasing, vendor, product, and inventory data into structured analytical datasets and an interactive Power BI dashboard.
+The project transformed raw sales, purchasing, vendor, product, and inventory data into structured analytical datasets and a Power BI dashboard.
 
 The final solution provides a consolidated view of:
 
 Vendor Performance
-        │
-        ├── Sales
-        ├── Gross Profit
-        └── Profit Margin
-              │
-              ▼
+Sales
+Gross Profit
+Profit Margin
 Product Performance
-        │
-        ├── Sales
-        ├── Gross Profit
-        └── Profit Margin
-              │
-              ▼
+Sales
+Gross Profit
+Profit Margin
 Inventory Performance
-        │
-        ├── Inventory Change
-        ├── Ending Inventory
-        └── Inventory Turnover
+Inventory Change
+Ending Inventory
+Inventory Turnover
 
 This project demonstrates an end-to-end data analytics workflow, from raw data understanding and preparation through SQL-based transformation and analysis to business intelligence reporting in Power BI.
 
